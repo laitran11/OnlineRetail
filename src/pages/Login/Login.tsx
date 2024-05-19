@@ -18,7 +18,7 @@ export default function Login() {
             const member: Member[] | null = await fetchlogin(loginData);
             if(member){
                 localStorage.setItem('isLoggedIn', 'true');
-                history('/');
+                history('/dashboard');
             }
             else{
                 setError("Invalid username or password");
